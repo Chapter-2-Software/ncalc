@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Logging;
 using NCalc.Domain;
 using NCalc.Exceptions;
 using NCalc.Logging;
@@ -9,13 +8,13 @@ namespace NCalc.Factories;
 /// <summary>
 /// Class responsible to create <see cref="LogicalExpression"/> objects. Parlot is used for parsing strings.
 /// </summary>
-public sealed class LogicalExpressionFactory(ILogger<LogicalExpressionFactory> logger) : ILogicalExpressionFactory
+public sealed class LogicalExpressionFactory() : ILogicalExpressionFactory
 {
     private static readonly LogicalExpressionFactory Instance;
 
     static LogicalExpressionFactory()
     {
-        Instance = new LogicalExpressionFactory(DefaultLoggerFactory.Value.CreateLogger<LogicalExpressionFactory>());
+        Instance = new LogicalExpressionFactory();
     }
 
     public static LogicalExpressionFactory GetInstance() => Instance;
@@ -28,7 +27,6 @@ public sealed class LogicalExpressionFactory(ILogger<LogicalExpressionFactory> l
         }
         catch (Exception exception)
         {
-            logger.LogErrorCreatingLogicalExpression(exception, expression);
             throw new NCalcParserException("Error parsing the expression.", exception);
         }
     }
