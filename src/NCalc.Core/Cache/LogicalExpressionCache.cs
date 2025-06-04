@@ -1,5 +1,4 @@
 ﻿using NCalc.Domain;
-using NCalc.Logging;
 
 namespace NCalc.Cache;
 
@@ -41,10 +40,7 @@ public sealed class LogicalExpressionCache() : ILogicalExpressionCache
             if (kvp.Value.TryGetTarget(out _))
                 continue;
 
-            if (_compiledExpressions.TryRemove(kvp.Key, out _))
-            {
-                // logger.LogRemovedFromCache(kvp.Key);
-            }
+            _compiledExpressions.TryRemove(kvp.Key, out _);
         }
     }
 }
