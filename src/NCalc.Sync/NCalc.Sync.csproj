@@ -5,8 +5,8 @@
     <PropertyGroup>
 
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <PackageProjectUrl>https://github.com/ncalc/ncalc</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/ncalc/ncalc.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Chapter-2-Software/ncalc</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Chapter-2-Software/ncalc.git</RepositoryUrl>
         <PackageTags>ncalc; sync; expressions; math; evaluation;</PackageTags>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -25,9 +25,10 @@
 
     <!-- Unsigned Assembly Configuration -->
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release' ">
-        <AssemblyName>NCalc.Sync</AssemblyName>
-        <PackageId>NCalcSync</PackageId>
-        <Description>NCalc is a fast and lightweight expression evaluator library for .NET, designed for flexibility and high performance. It supports a wide range of mathematical and logical operations. NCalc can parse any expression and evaluate the result, including static or dynamic parameters and custom functions. This package contains the unsigned assembly 'NCalc'. For the stronly signed assembly version of 'NCalc', see the NCalcSync.signed package.</Description>
+        <AssemblyName>NCalc.Sync.NoLog</AssemblyName>
+        <PackageId>NCalcSyncNoLog</PackageId>
+        <Description>NCalc is a fast and lightweight expression evaluator library for .NET, designed for flexibility and high performance. It supports a wide range of mathematical and logical operations. NCalc can parse any expression and evaluate the result, including static or dynamic parameters and custom functions. This package contains the unsigned assembly 'NCalc'. For the stronly signed assembly version of 'NCalc', see the NCalcSync.signed package. This NoLog fork removes the dependency on Microsoft.Abstractions.Logging for compatibility with netstandard2.0.</Description>
+        <Company>Chapter 2 Software</Company>
     </PropertyGroup>
 
     <!-- Strongly Signed Assembly Configuration -->
