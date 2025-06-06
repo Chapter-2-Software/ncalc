@@ -55,6 +55,6 @@
         <Optimize>true</Optimize>
         <Description>NCalc is a fast and lightweight expression evaluator library for .NET, designed for flexibility and high performance. It supports a wide range of mathematical and logical operations. NCalc can parse any expression and evaluate the result, including static or dynamic parameters and custom functions. This package contains the strongly signed assembly version of 'NCalc'. For the unsigned assembly of 'NCalc', see the NCalcSync package.</Description>
         <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>../../NCalc.snk</AssemblyOriginatorKeyFile>
+        <AssemblyOriginatorKeyFile>../../C2_NCalcNoLog.snk</AssemblyOriginatorKeyFile>
     </PropertyGroup>
 </Project>

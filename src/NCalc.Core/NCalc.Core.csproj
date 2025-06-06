@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <Nullable>enable</Nullable>
-        <PackageId>NCalc.Core</PackageId>
-        <AssemblyName>NCalc.Core</AssemblyName>
+        <PackageId>NCalc.Core.NoLog</PackageId>
+        <AssemblyName>NCalcCoreNoLog</AssemblyName>
         <Description>Assembly with the core logic of NCalc.</Description>
         <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>../../NCalc.snk</AssemblyOriginatorKeyFile>
+        <AssemblyOriginatorKeyFile>../../C2_NCalcNoLog.snk</AssemblyOriginatorKeyFile>
         <RootNamespace>NCalc</RootNamespace>
     </PropertyGroup>
 
